@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">wearableListener</string>
+    <string name="listener_round">Listener(R)</string>
+    <string name="listener_square">Listener(S)</string>
+</resources>

@@ -1,0 +1,5 @@
+key.store=Path to your keystore here
+key.alias=****
+key.store.password=****
+key.alias.password=****
+

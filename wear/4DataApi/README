@@ -1,0 +1,38 @@
+WDataApi is a simple App that demonstrates the DataApi and the WearableListener.
+
+A nugget of data is sent from the Mobile device to the Android Wear devicei, in this example/sample App.
+
+In order to run/test this app, install the wear  App to your Android Wear device and install the handheld app to your handheld Android device.
+
+Your Android Wear device need not have the App running / in the foreground.
+
+Start the handheld App. You should see the nugget of data ( based on the current date )  displayed  on your handheld App's Activity.
+
+The same nugget of data is written via the  DataAPI and becomes available in your Android Wear App. The Wear App does not need to be running in order to receive and consume the nugget of data transferred over the Wear network.
+
+
+How to build and install
+-------------------------
+Install wear App
+  Connect Wear device via USB, or otherwise
+  $ cd wear
+  
+  $ gradle clean installDebug
+  
+  $ cd ..
+
+  Examine Wear device and verify  that the App WDataApi is installed. 
+
+Install Handheld App
+  Connect Handheld (phone, tablet )  device that's paired with Wear device
+ 
+  From this project's home directory (where this README is located), 
+  $ cd mobile
+
+  $ gradle clean installDebug
+
+Running
+  Place both your handheld device and your Wear Device side by side within your range of sight and reach.
+  Start the WDataApi App on your handheld device. It will display the nugget  of information (  based on the current time)  that it wrote to the Android Wear Network.
+
+ You should see the same nugget of information displayed on your Wear device. The DataApi  supports synchronization of DataItems across devices on the Wear Network. DataItems are private to the application.

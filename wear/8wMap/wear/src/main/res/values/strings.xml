@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">wMap</string>
+    <string name="intro_text">Long click to exit the map.</string>
+</resources>

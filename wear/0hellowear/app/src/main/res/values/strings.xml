@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Hellowear0</string>
+    <string name="hello_round">Hello Wearbook Round World!</string>
+    <string name="hello_square">Hello Wearbook Square World!</string>
+
+</resources>

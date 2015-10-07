@@ -1,0 +1,31 @@
+This example accesses/ reads Fit history data(cumulative steps). You might  see an empty set of data in case you do not have any Fit History data/ you  have not run the associated FitWHistory ( Fit Write History) App. 
+
+After you have run the FitWHistory App, running the current App should show you Fit History Data.
+
+To illustrate such  before and after results, this example has been  sequentially placed/numbered  prior to the FitWHistory App.
+
+Building and Running
+--------------------
+1. Setup Google Fit ( Fitness ) API access via the Google Console https://console.developers.google.com.
+   The steps for activating  the Google Fit "Fitness"  API and setting up the Android client ID are available
+   at :
+    https://developers.google.com/console/help/new/
+    https://developers.google.com/fit/android/get-started
+
+2. Ensure that this projects src/main/res/values/version.xml has the  Google Play Services version that
+   you are integrating with based on dependency declared in your app/build.gradle dependencies such as
+   >> compile 'com.google.android.gms:play-services:7.8.0'   ( 789500)
+   or later per your build settings.  If for any reason you do not get the version right, you will
+   encounter a helpful runtime errori message along the lines :
+    ( Expected versionX but found versionY).
+    Using  "versionY"  in your src/main/res/values/version.xml should fix this matter.
+ 
+3. Copy  build.gradle.CHANGEME to build.gradle and modify its content to match your keystore specifics
+
+4. Build and install App:
+	$ gradle clean installRelease
+       
+5. Run the App
+   The App will display the Fit History data ( cumulative steps) if such data was written to the Fit History by any App including but not limited to  this  book's sample App FitWHistory ( Fit Write History). 
+
+

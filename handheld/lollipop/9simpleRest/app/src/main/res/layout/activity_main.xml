@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tableLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:shrinkColumns="*"
+    android:stretchColumns="*" >
+
+    <TableRow
+        android:id="@+id/tableRowOverview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33sp"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/textViewSummaryWeather"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="6"
+            android:gravity="center"
+            android:text="Cloudy,etc"
+            android:textSize="18dp"
+            android:textStyle="bold" >
+        </TextView>
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRowTemperature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33sp"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/textViewTemperatureInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="6"
+            android:gravity="center"
+            android:text="50 L, 70 High"
+            android:textSize="18dp"
+            android:textStyle="bold" >
+        </TextView>
+
+    </TableRow>
+
+    <!--TableRow
+        android:id="@+id/tableRowSunInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4sp"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/textViewSunInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="6"
+            android:gravity="center"
+            android:text=""
+            android:textSize="18dp"
+            android:textStyle="bold" >
+        </TextView>
+
+    </TableRow-->
+
+</TableLayout>

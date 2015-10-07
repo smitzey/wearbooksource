@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.wearbook.blem.blem0" >
+
+    <!-- In 2015, the min and target SDK are recommended to be declared in the build.gradle file-->
+
+    <!--
+    If your application is primarily about Bluetooth LE (BLE) scanning, it will tend to make sense that you declare this as a required feature
+    Doing so will make it a prerequisite that the device has the required feature before the App can be even offered for install
+    on that particular device
+    If BLE scanning is not a core function of your App, you can use programatic means to determine if the device has a particular feature:
+
+      http://developer.android.com/reference/android/content/pm/PackageManager.html#hasSystemFeature(java.lang.String)
+      http://developer.android.com/reference/android/content/pm/PackageManager.html#FEATURE_BLUETOOTH_LE
+
+    Particularly in case of Bluetooth and Bluetooth LE, you may find it relevant to declare bluetooth rather that Bluetooth LE
+    as the required  feature and use BLE after programatically
+
+    The use feature does not currently provide an OR clause that can let you stipulate for example that the device is required to have either
+    Bluetooth or Bluetooth LE.   -->
+
+    <uses-feature android:name="android.hardware.bluetooth_le" android:required="true"/>
+    <uses-feature android:name="android.hardware.bluetooth" android:required="true"/>
+
+    <!--uses-feature android:name="android.hardware.camera2" android:required="true"/-->
+
+    <!-- As was the case before Android M arrived in Q2 2015, permissions need to continue to be declared in the manifest file.
+    However these permissions are not accepted by the user en mass prior to app install, rather they need to be accepted
+    individually at runtime and ideally close to the first use not of the App but the first use of the particular  use case
+    that requires the permission.
+
+    Apps need to be resilient and implemented in a manner such that they do not crash in case a particular permission has not been
+    granted. Also App developers get an opportunity to explain to the user on a per permission basis, the reason the App needs
+    a particular permission and what App functionality will become unavailable should the user decline to provide a particular functionality.
+
+    Before Android M, there have been innumerable  Apps are were aggressive about  acquiring permissions from the user that
+    were not truly needed and the user was forced into accepting all the permissions or choosing to install the App.
+
+    Android M empowers users, but it also empowers Apps that truly need a permission to explain the reasons and convince their users
+    that particular permissions are needed in order to implement particular use cases, that their app does not engage in performing
+    non-essential functions or functions that are counter to the interests of the users and their privacy.
+
+    -->
+
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <!--uses-permission android:name="android.permission.CAMERA"/-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".BleScanScanActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

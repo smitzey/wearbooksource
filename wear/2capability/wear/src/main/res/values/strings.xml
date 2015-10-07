@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Capability</string>
+
+    <string name="wear_nodes_round">Capability based Nodes</string>
+
+    <string name="wear_nodes__square">Capability based Nodes</string>
+
+    <string name="found_nodes">None, Kiene, Non, Ninguno</string>
+
+</resources>

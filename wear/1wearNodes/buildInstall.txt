@@ -1,0 +1,8 @@
+How to build and install
+------------------------
+
+Connect Android Wear device, ensure its connected using adb devices.
+
+$ gradle clean installDebug
+
+( Although this example has a mobile handheld App, that may be ignored. In general, it is useful to target both the handheld and the Android Wear platform from the start, as the production version of any (Playstore distributed) Android Wear project  will entail both the Wear App and its companion  handheld App )

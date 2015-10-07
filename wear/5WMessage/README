@@ -1,0 +1,60 @@
+WMessage is a simple App that demonstrates the MessageApi  and the MessageApi.MessageListener
+
+A Message  is sent from the WEAR APP  to the HANDHELD APP, in this sample project.
+
+In order to run/test this app, install the wear  App to your Android Wear device and install the handheld app to your handheld Android device.
+
+BOTH the APPS need to run in the foreground.
+
+Start the handheld App. You should see on message displayed  on your handheld App's Activity, initially.
+
+After you run the WEAR APP on your WEAR device while it's connected to your  HANDHELD device, you should see the Message that originated from your WEAR APP, visible in your HANDHELD APP.
+
+
+How to build and install
+-------------------------
+Install wear App
+  Connect Wear device via USB, or otherwise
+  $ cd wear
+
+  $ gradle clean installDebug
+
+  $ cd ..
+
+  Examine Wear device and verify  that the App WDataApi is installed.
+
+Install Handheld App
+  Connect Handheld (phone, tablet )  device that's paired with Wear device
+
+  From this project's home directory (where this README is located),
+  $ cd mobile
+
+  $ gradle clean installDebug
+
+Running
+
+WEAR DEVICE SIDE : 
+ START THE HANDHELD APP on the HANDHELD DEVICE. Initially you should see no Message content.
+
+ START THE WEAR APP on WEAR device : 
+ You should see a random numberic value  that was generated in the WEAR APP, on the WEAR device's screen and ialso the following in the WEAR DEVICE LOG :
+
+>> D/io.wearbook.wmessage.WMessageWearActivity( 5142): GoogleApiClient.ConnectionCallbacks::onConnected() Wearable.API
+>> D/io.wearbook.wmessage.WMessageWearActivity( 5142): sendMessage() gonna attempt sending message=-1115149770
+>> D/io.wearbook.wmessage.WMessageWearActivity( 5142): sendMessage() connectedNodesResult | status |    connectedNodesResult.sizecom.google.android.gms.wearable.internal.zzba$zzb@280ef97c | status= Status{statusCode=SUCCESS, resolution=null} |  2
+>> D/io.wearbook.wmessage.WMessageWearActivity( 5142): sendMessage() sent message --> nodeId/displayName/isNearby -1115149770--> [ 30680774,Nexus 6, true ]
+>> D/io.wearbook.wmessage.WMessageWearActivity( 5142): sendMessage() sent message --> nodeId/displayName/isNearby -1115149770--> [ cloud,cloud, false ]
+
+The above LOG snippet from  the WEAR device, shows the successful detection of peer Nodes on the Wear network, and the successful sending of the  numeric message to detected nodes.
+
+HANDHELD  DEVICE side :
+
+ After the WEAR APP has been started on the WEAR device, you should see the numberic message show up in the HANDHELD APP's Activity, and also LOG content similar to :
+
+>> ... D io.wearbook.wmessage.WMessageHandheldActivity: GoogleApiClient.ConnectionCallbacks::onConnected() Wearable.API
+>> ... D io.wearbook.wmessage.WMessageHandheldActivity: GoogleApiClient.ConnectionCallbacks::onConnected() added MessageListener...
+>> ... I ActivityManager: Displayed io.wearbook.wmessage/.WMessageHandheldActivity: +371ms
+>> ... D io.wearbook.wmessage.WMessageHandheldActivity: onMessageReceived() messageEvent=MessageEventParcelable[17424,/io.wearbook.wmessage.IMPORTANT_RANDOM_MESSAGE, size=9]
+>> ... D io.wearbook.wmessage.WMessageHandheldActivity: onMessageReceived() messageEvent=/io.wearbook.wmessage.IMPORTANT_RANDOM_MESSAGE ab1f00d5 -1115149770
+.
+

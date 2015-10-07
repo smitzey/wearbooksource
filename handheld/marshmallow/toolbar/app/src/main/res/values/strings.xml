@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">toolbar</string>
+    <string name="toolbar_title">I\'m a Toolbar set as Actionbar</string>
+    <string name="action_settings">Settings</string>
+</resources>

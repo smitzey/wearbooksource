@@ -1,0 +1,6 @@
+At the time of writing, the gradle build system is still undergoing updates. This particular project uses the ANT build system to develop a Google Fit App.
+
+Detailed instructions on how to build and run this App have been provided in the BOOK.
+
+Author's Note August 2015 :  There have been changes to the Google Play Services library, build tools and GoogleApiClient, which have had the effect of needing to deprecate this project in favor of GHelloFit, which is the equivalent project build using gradle and aligned with the latest Google Play Services 7.0, GoogleApiClient, Android sdk build tools,  and gradle plugin.
+

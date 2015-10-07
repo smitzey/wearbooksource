@@ -1,0 +1,32 @@
+voiceNoti  demonstrates Notifications, RemoteInput(Voice) and Text to Speech (TTS) 
+
+In order to run/test this app, install the handheld   App to your handheld device
+
+Start the handheld App. You should see the notification on the paired Wear Device.
+
+
+How to build and install
+-------------------------
+Install Handheld App
+  Connect handheld  device via USB
+  $ cd mobile
+  
+  $ gradle clean installDebug
+
+Running
+  Place both your handheld device and your Wear Device in proximity, verify that they are paired ( The Wear device should  not show the disconnected cloud icon).
+  Start voiceNoti App on handheld device.
+  Observe that the notification is displayed both on the handheld device as well as the Wear device
+  Consume the notification via the Wear device by tapping on the Notification and swiping left. 
+  You should see the "Speak" screen, tap on it.
+  You should see the Wear's System "Speak Now"
+  Speak a few kind  words to your Wear device
+  You should see your words as Text, as recognized by your Wear device and "Sending...."
+  This remote input text will be sent to your Handheld "phone/tablet"  device
+  You should see the same words appear on your handheld device/ App
+  You should also hear the same words as Text to Speech 
+  ( The screenshots of this flow has been captured and is available in the screenshots directory ) 
+
+
+Source code for book : Wearable Android - Android Wear and Google Fit / WILEY 2015
+-- Sanjay M. Mishra

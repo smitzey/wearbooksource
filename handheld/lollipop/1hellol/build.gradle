@@ -1,0 +1,21 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.11.1'
+    }
+}
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 'Google Inc.:Google APIs:21'
+    buildToolsVersion '21.1.2'
+
+    buildTypes {
+        release {
+            runProguard false
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+        }
+    }
+}

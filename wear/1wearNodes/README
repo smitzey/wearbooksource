@@ -1,0 +1,14 @@
+WearNodes is a sample App that explores the Node interface. The concept of the node lies at the heart of the Android Wear Network, which is defined as a network of nodes which are Android Wear devices and handheld devices that the Wear devices connect to and interact with, in a user  centric model.
+ 
+This example uses the NodeApi to obtain information of the local Node ( ie. self, "this" device) and the "connected nodes such as a paired handheld device. The "cloud" is also considered to be a node.
+
+The Node has attributes :
+	displayName
+	id
+	isNearby ( recently added, the cloud node is not nearby, while the handheld device node and the local node will typically have an isNearby attribute of true)
+
+Wearable Android, Sanjay Mishra  Copyright 2014, 2015 
+
+How to build and install
+-------------------------
+Refer buildInstall.txt

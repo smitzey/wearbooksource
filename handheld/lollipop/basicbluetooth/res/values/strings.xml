@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Wearable Android : BluetoothLE</string>
+    <string name="bluele_not_system_feature">BluetoothLE is unavailable on your device (Exiting now)</string>
+    
+</resources>
