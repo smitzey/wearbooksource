@@ -1,0 +1,17 @@
+This sample  demonstrates  the WearableListView and lists the Sensors available on your Wear device. 
+
+In order to run/test this app, install the Wear App to your Wear device.
+
+How to build and install
+-------------------------
+Install Wear App
+  Connect Wear  device via USB
+  $ cd wear
+  $ gradle clean installDebug
+
+Running
+  start the wList app. You should see a listview with a list of sensors available/detected for your device. 
+
+
+Source code for book : Wearable Android - Android Wear and Google Fit / WILEY 2015
+-- Sanjay M. Mishra
