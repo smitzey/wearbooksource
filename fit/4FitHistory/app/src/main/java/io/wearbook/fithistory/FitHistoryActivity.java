@@ -26,13 +26,13 @@ import java.util.concurrent.TimeUnit;
 
 public class FitHistoryActivity extends Activity {
 
-    private static  final int CODE_PERMISSIONS = 0;
+    private static final int CODE_PERMISSIONS = 0;
 
     private GoogleApiClient googleApiClient;
     private boolean authInProgress = false;
 
     private static final int AUTH_REQUEST = 1;
-    private TextView outputTextView  ;
+    private TextView outputTextView;
 
 
     @Override
@@ -45,9 +45,9 @@ public class FitHistoryActivity extends Activity {
             authInProgress = savedInstanceState.getBoolean(AUTH_IN_PROGRESS);
         }
 
-        outputTextView = (TextView) findViewById( R.id.aTextView) ;
+        outputTextView = (TextView) findViewById(R.id.aTextView);
 
-        setTitle( getTitle() + "- Read" );
+        setTitle(getTitle() + "- Read");
 
         initGoogleApiClient();
 
@@ -114,7 +114,7 @@ public class FitHistoryActivity extends Activity {
                                     try {
                                         Log.d(TAG, "addOnConnectionFailedListener() authInProgress=" + authInProgress);
                                         authInProgress = true;
-                                        Log.d(TAG, "addOnConnectionFailedListener() attempting startResolutionForResult" );
+                                        Log.d(TAG, "addOnConnectionFailedListener() attempting startResolutionForResult");
                                         result.startResolutionForResult(FitHistoryActivity.this,
                                                 AUTH_REQUEST);
                                     } catch (Exception e) {
@@ -130,46 +130,37 @@ public class FitHistoryActivity extends Activity {
 
     private void accessFitnessHistory() {
 
-        Log.d(TAG, "accessFitnessHistory()...") ;
-        Calendar startTimeCalendar  = Calendar.getInstance();
-        startTimeCalendar.set(2014, 4, 4) ;
+        Log.d(TAG, "accessFitnessHistory()...");
+        Calendar startTimeCalendar = Calendar.getInstance();
+        startTimeCalendar.set(2014, 4, 4);
 
-        DataReadRequest readDataRequest = new  DataReadRequest.Builder()
-                .read ( DataType.TYPE_STEP_COUNT_CUMULATIVE)
+        DataReadRequest readDataRequest = new DataReadRequest.Builder()
+                .read(DataType.TYPE_STEP_COUNT_CUMULATIVE)
                 .setLimit(18)
                 .setTimeRange(startTimeCalendar.getTimeInMillis(), System.currentTimeMillis(), TimeUnit.MILLISECONDS)
-                .build() ;
+                .build();
 
-        PendingResult<DataReadResult> pendingResultDataReadResult  = Fitness.HistoryApi.readData(googleApiClient, readDataRequest) ;
+        PendingResult<DataReadResult> pendingResultDataReadResult = Fitness.HistoryApi.readData(googleApiClient, readDataRequest);
 
         pendingResultDataReadResult.setResultCallback(new ResultCallback<DataReadResult>() {
-                public void onResult(DataReadResult dataReadResult) {
+                                                          public void onResult(DataReadResult dataReadResult) {
 
-                    String historyInfo = Arrays.deepToString(dataReadResult.getDataSets().toArray() )  ;
+                                                              String historyInfo = Arrays.deepToString(dataReadResult.getDataSets().toArray());
 
-                    Log.d(TAG, "accessFitnessHistory() dataReadResult=" + historyInfo);
-                    addContentToView("DataReadResult = " +  historyInfo);
-
-
-
-                }
-        }
-
+                                                              Log.d(TAG, "accessFitnessHistory() dataReadResult=" + historyInfo);
+                                                              addContentToView("DataReadResult = " + historyInfo);
+                                                          }
+                                                      }
         );
-
     }
 
 
-    private synchronized void addContentToView ( final String moreContent ) {
-
-
+    private synchronized void addContentToView(final String moreContent) {
         runOnUiThread(new Runnable() {
 
             @Override
             public void run() {
-
-                outputTextView.setText ( outputTextView.getText() + moreContent + "\n") ;
-
+                outputTextView.setText(outputTextView.getText() + moreContent + "\n");
             }
         });
     }
