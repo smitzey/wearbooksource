@@ -71,12 +71,10 @@ public class FitHistoryActivity extends Activity {
 
                             @Override
                             public void onConnected(Bundle bundle) {
+
                                 Log.d(TAG, "initGoogleApiClient() onConnected good...");
                                 addContentToView("googleApiClient=" + googleApiClient + "\n");
-
-
                                 accessFitnessHistory();
-
 
                             }
 
