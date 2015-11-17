@@ -15,9 +15,8 @@ How to build and install
 -------------------------
 Install wear App
   Connect Wear device via USB, or otherwise
-  $ cd wear
   
-  $ gradle clean installDebug
+  $ gradle wear:clean wear:installDebug
   
   $ cd ..
 
@@ -27,9 +26,8 @@ Install Handheld App
   Connect Handheld (phone, tablet )  device that's paired with Wear device
  
   From this project's home directory (where this README is located), 
-  $ cd mobile
 
-  $ gradle clean installDebug
+  $ gradle mobile:clean mobile:installDebug
 
 Running
   Place both your handheld device and your Wear Device side by side within your range of sight and reach.
