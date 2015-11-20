@@ -15,11 +15,9 @@ How to build and install
 -------------------------
 Install wear App
   Connect Wear device via USB, or otherwise
-  $ cd wear
 
-  $ gradle clean installDebug
+  $ gradle wear:clean wear:installDebug
 
-  $ cd ..
 
   Examine Wear device and verify  that the App WDataApi is installed.
 
@@ -27,9 +25,8 @@ Install Handheld App
   Connect Handheld (phone, tablet )  device that's paired with Wear device
 
   From this project's home directory (where this README is located),
-  $ cd mobile
 
-  $ gradle clean installDebug
+  $ gradle mobile:clean installDebug
 
 Running
 
