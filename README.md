@@ -18,4 +18,23 @@ Since the time that this codebase and book were written, there have been many ch
 ## Issues
 Please feel free to log suggestions and  issues  that you encounter with this codebase. 
 
+
+## Sample Code ( Wear ) 
+0hellowear 
+hellowear0  
+1wearNodes  
+2capability  
+4DataApi  
+5WMessage  
+6wearNotification  
+7voiceNoti  
+8wList  
+8wMap 
+
+## Sample Code (Fit) 
+0GHelloFit  
+0hellofit  
+4FitHistory  
+5FitWHistory
+
 Thank you. 
