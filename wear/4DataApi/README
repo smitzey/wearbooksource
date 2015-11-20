@@ -1,6 +1,6 @@
 WDataApi is a simple App that demonstrates the DataApi and the WearableListener.
 
-A nugget of data is sent from the Mobile device to the Android Wear devicei, in this example/sample App.
+A nugget of data is sent from the Mobile device to the Android Wear device, in this example/sample App.
 
 In order to run/test this app, install the wear  App to your Android Wear device and install the handheld app to your handheld Android device.
 
