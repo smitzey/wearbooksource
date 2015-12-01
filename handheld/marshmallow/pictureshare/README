@@ -1,0 +1,26 @@
+Implementation notes :
+
+( I ran into issues using the dropbox api v2 released this month/ Nov 2015 , therefore opted for the 1.x version of API)
+
+This is a barebones  implementation that  :
+    * allows the user to authenticate to dropbox
+    * provides access to camera/ taking pictures
+    * uploads picture to dropbox  /photos/
+
+Coding standards
+Used longer,  spelt out variables names that are easier to search,  less ambivalent
+Avoided the mPrefixOnInstanceVariables to avoid crowding of the namespace around m*
+
+/screenshots/ contains the screenshots of the running app on my system
+
+How to build:
+
+1) Edit PictureShareMainActivity.java ( app/src/main/java/io/wearbook/pictureshare/PictureShareMainActivity.java)
+/* please input your API KEY and SECRET below:
+    https://www.dropbox.com/developers/apps/create */
+ private static final String DROPBOX_APPKEY      = "YOUR API KEY" ;
+ private static final String DROPBOX_APPSECRET   = "YOUR APP SECRET" ;
+
+2) Compile via your IDE or via the command line $ gradle clean installDebug
+
+3) Run the App

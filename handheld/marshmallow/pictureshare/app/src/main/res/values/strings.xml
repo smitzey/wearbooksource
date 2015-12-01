@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PictureShare</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_dropboxlink">Dropbox</string>
+    <string name="title_activity_permission_check">PermissionCheckActivity</string>
+
+</resources>
