@@ -15,11 +15,28 @@ Avoided the mPrefixOnInstanceVariables to avoid crowding of the namespace around
 
 How to build:
 
-1) Edit PictureShareMainActivity.java ( app/src/main/java/io/wearbook/pictureshare/PictureShareMainActivity.java)
+1A) Edit PictureShareMainActivity.java ( app/src/main/java/io/wearbook/pictureshare/PictureShareMainActivity.java)
 /* please input your API KEY and SECRET below:
     https://www.dropbox.com/developers/apps/create */
  private static final String DROPBOX_APPKEY      = "YOUR API KEY" ;
  private static final String DROPBOX_APPSECRET   = "YOUR APP SECRET" ;
+
+1B) Edit the AndroidManifest.xml and insert your Dropbox API key in the declaration for the AuthActivity (below):
+<activity
+            android:name="com.dropbox.client2.android.AuthActivity"
+            android:launchMode="singleTask"
+            android:configChanges="orientation|keyboard">
+            <intent-filter>
+                <!-- db-YOUR-DROPBOX API KEY BELOW-->
+               <data android:scheme="db-[Your Dropbox Api Key here]" />
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+
+
 
 2) Compile via your IDE or via the command line $ gradle clean installDebug
 
