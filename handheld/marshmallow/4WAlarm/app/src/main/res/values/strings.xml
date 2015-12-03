@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">WAlarm</string>
+    <string name="app_description">This app sets up an  Alarm that originates a notification. Touch the button at the bottom to start the alarm after 3 minutes</string>
+    <string name="action_settings">Settings</string>
+</resources>
