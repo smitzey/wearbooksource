@@ -78,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
                 operationPendingIntent );
 
         Log.d ( TAG, "startAlarm() setExact alarm for 3 minutes later...") ;
-        // in real world applications, exact alarms should be avoided as much as possible.
+        // in real world applications, exact alarms should be avoided as much as possible for
+        // efficiency reasons...
 
     }
 
