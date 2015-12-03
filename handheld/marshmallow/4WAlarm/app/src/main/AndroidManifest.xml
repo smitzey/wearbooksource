@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="io.wearbook.walarm">
+          package="io.wearbook.walarm">
 
     <application
         android:allowBackup="true"
@@ -19,7 +19,10 @@
             </intent-filter>
         </activity>
 
-
+        <receiver
+            android:name=".MyAlarmBroadcastReceiver"
+        >
+        </receiver>
 
 
     </application>

@@ -1,1 +1,3 @@
 Source code for handheld ( phones, tablet ) devices.
+
+The content of this directory varies somewhat from that indicated in the book. Particularly,  the marshmallow directory has been added and the project samples that are aligned with the current gradle and Android Studio tools. 

@@ -41,8 +41,8 @@
             android:launchMode="singleTask"
             android:configChanges="orientation|keyboard">
             <intent-filter>
-                <!-- db-YOUR-DROPBOX APP KEY-->
-               <data android:scheme="db-g1vwttkssj68g1l" />
+                <!-- db-YOUR-DROPBOX APP KEY BELOW-->
+               <data android:scheme="db-[Your Dropbox App Key here]" />
                 <action android:name="android.intent.action.VIEW" />
                 <category android:name="android.intent.category.BROWSABLE"/>
                 <category android:name="android.intent.category.DEFAULT" />
