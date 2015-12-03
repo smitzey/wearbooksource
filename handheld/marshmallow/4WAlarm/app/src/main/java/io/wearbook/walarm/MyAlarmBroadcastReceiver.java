@@ -10,9 +10,7 @@ import android.util.Log;
 
 import java.util.Date;
 
-/**
- * Created by sanjay on 12/3/15.
- */
+
 public class MyAlarmBroadcastReceiver extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent) {
