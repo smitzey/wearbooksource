@@ -1,0 +1,1 @@
+This is a simple app that sets an alarm with a 3 minute delay. The alarm is handled by firing as notification as a means to letting us know that the alarm did trigger.
