@@ -21,6 +21,7 @@ import android.widget.TextView;
 import java.util.Locale;
 
 
+
 /**
  * This example demonstrates  extended notification's remote input in action,
  * and also the base Android platform's Text to Speech feature.
@@ -133,9 +134,12 @@ public class NotiVoiceActivity extends AppCompatActivity implements
 
     @Override
     public void onInit(int status) {
-        textToSpeech.setLanguage(Locale.getDefault());
+
         if (fromWear != null) {
+            textToSpeech.setLanguage(Locale.getDefault());
             textToSpeech.speak(fromWear, TextToSpeech.QUEUE_ADD, null);
+            textToSpeech.setLanguage(Locale.GERMAN);
+
         }
     }
 
